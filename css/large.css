@@ -1,0 +1,163 @@
+@media only screen and (min-width: 768px) {
+    body {
+      background-image: url("/phpmotors/images/site/small_check.jpg");
+      background-size: cover;
+    }
+  
+    #wrapper {
+      border: 5px solid #4c96d7;
+      border-radius: 10px;
+      margin-top: 1em;
+      width: 75%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: .5rem;
+    }
+    section, h1, h2, p {
+      margin-left: .5rem;
+    }
+    main {
+      display: contents;
+    }
+
+    header, nav, footer, .hero, .errorMsg {
+      grid-column: 1/3;
+      
+    }
+
+    .loginPage,
+    .registrationPage,
+    .addCarPage,
+    .updateCarPage,
+    .updateVehicle,
+    .managPage,
+    .vehiManag,
+    .deleteCarPage,
+    .admin-view,
+    .accountInfo-view,
+    .addClassPage,
+    .detailsPage,
+    .classPage,
+    .imgMan,
+    .addNewImg,
+    .allImg,
+    .search-section,
+    .results
+    {
+      grid-column: 1/3;
+    }
+    
+    .infoUp {
+      display: flex;
+      justify-content:space-evenly;
+    }
+
+    .hero {
+      grid-row: 3/4;
+      padding: 0 .5rem;
+    }
+
+    .heroBtn img {
+      width: 60%;
+    }
+
+    .heroContainer {
+      padding-left: 20px;
+      grid-column: 1/5;
+      text-align: left;
+    }
+
+    .heroContainer a {
+      position: absolute;
+      left: -20px;
+      top: 7.5rem;
+
+    }
+
+    .deloranHero {
+      margin-top: 10px;
+    }
+
+    .reviews {
+      grid-column: 2/3;
+      grid-row: 4/5;
+    }
+    .upgrades {
+      grid-column: 1/2;
+      grid-row: 4/5;
+    }
+
+    .submit-button {
+      width: 50%;
+    }
+
+    #inv-display {
+      padding: 10px;
+    }
+
+    #inv-display li {
+      max-width: none;
+    }
+
+    .vehiDetails {
+      text-align: left;
+      max-width: 1000px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .vehicle {
+      grid-column: 1/4;
+    }
+
+    .summary {
+        grid-column: 1/4;
+    }
+
+    .info {
+      grid-column: 3/4;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .images-container {
+      display: flex;
+      grid-column: 1/3;
+      gap: 10px;
+      flex-direction: column;
+    }
+
+    .thumbnails>img:hover {
+      transform: scale(1.5);
+    }
+
+
+    @media only screen and (min-width: 1200px) {
+
+        .images-container {
+          flex-direction: row-reverse;
+          justify-content: center;
+          align-items: center;
+        }
+    
+        .thumbnails {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+          margin-right: .5rem;
+        }
+    
+        .thumbnails img {
+          width: 200px;
+          height: 200px;
+        }
+        
+        #largeImg {
+          max-width: 90%;
+          overflow: hidden;
+        }
+      }  
+    
+}

@@ -1,0 +1,493 @@
+:root {
+    --primary-color: #bababa;
+    --secondary-color: #727272;
+    --tertiary-color: #00bcd4;
+
+    --accent: #0c74c9;
+    --accent-secondary: #01579e;
+    --background: #272626;
+    --white: #ffffff;
+
+    --headline-font: "Share Tech Mono", monospace;
+
+}
+
+* {
+    font-family: var(--headline-font);
+}
+
+html{
+    box-sizing: border-box;
+}
+   
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-size: 17px;
+}
+
+#wrapper {
+  width: 100%;
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 1em;
+}
+
+section {
+    margin: 0 .5rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--background);
+    padding: 1rem;
+
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--white);
+
+}
+
+nav ul li a:hover {
+    background-color: var(--accent);
+    padding: 1.1rem 1rem;
+    color: #000000;
+}
+
+.topHeader {
+    display: flex;
+    justify-content: space-between;
+}
+
+#logIn {
+    margin-right: .5rem;
+    color: var(--secondary-color);
+}
+
+footer {
+    margin-top: 1.5rem;
+    text-align: center;
+    border-top: 2px solid var(--background);
+}
+
+#loginLink,
+.account {
+    display: flex;
+    align-self: center;
+    padding-right: 1rem;
+}
+
+#loginLink,
+.account a {
+    text-decoration: none;
+    color: var(--background);
+    font-size: large;
+}
+#vehi-man,
+#man-link {
+    margin-left: .5rem;
+
+}
+
+.account > a::before {
+    margin: 0 0.5rem;
+}
+
+.account > a::before {
+    content: "|";
+}
+
+.account > a:first-child::before {
+    content: "";
+}
+
+
+.deloranHero {
+    width: 100%;
+}
+
+.heroBtn {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.hero {
+    position: relative;
+    padding: 0 .2rem;
+}
+
+.heroContainer {
+    color: var(--accent);
+}
+
+.hero h2 {
+    margin: 0;
+}
+
+h1 {
+    margin-top: 0;
+}
+
+h2 {
+    font-size: large;
+}
+
+.hero p {
+    position: absolute;
+    margin: 0;
+}
+
+.upgrades-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+.upgrades ul {
+    list-style: none;
+    padding-left: 0;
+    margin: .5rem;
+}
+
+.upgrades-list li {
+    margin-bottom: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--accent);
+}
+
+.upgrades-list img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    padding: .5rem;
+}
+
+.upgrades a {
+    background-color: white;
+    display: flex;
+    align-items: center;
+}
+
+.reviews li {
+    margin-bottom: 20px;
+}
+
+.results {
+    margin: .5rem;
+}
+
+#resultsList {
+    padding: 0;
+}
+
+#resultsList li {
+    list-style: none;
+        padding: 0;
+}
+
+#loginForm, 
+#registrationForm,
+#newCarForm,
+#newClass,
+#passwordForm,
+#manageForm,
+#search-form {
+    width: 90%;
+    max-width: 480px; 
+    margin: 1rem auto;
+    background-color:#1c1c1c;
+    padding: 1rem;
+    color: #fff;
+    box-shadow:  0px 5px 10px #000000d7;
+}
+
+#search-form {
+    width: 100%;
+        /* Take up the entire width of the parent container */
+    max-width: none;
+}
+
+#newCarForm {
+    background-color: var(--accent-secondary);
+    max-width: 90%;
+}
+
+.success,
+.notice,
+.emptyField,
+.error-message {
+    background-color: #dff0d8;
+    border: 1px solid #3c763d;
+    color: #3c763d;
+    padding: .5rem;
+    margin-bottom: .5rem;
+}
+
+.price {
+    color: #3c763d;
+    font-size:x-large;
+}
+
+.emptyField,
+.error-message {
+    border: 1px solid rgb(188, 65, 65);
+    color: rgb(188, 65, 65);
+    background-color: #f0d8d8;
+}
+
+.notice {
+    border: 1px solid #1e57db;
+    color: #1e57db;
+    background-color: #d8daf0;
+}
+
+form input,
+textarea {
+    display: block; 
+    width: 100%;
+    padding: 5px;
+}
+
+form :required:invalid {
+    border: 2px solid #ce2029;
+}
+
+form :required:valid {
+    background-color: #dff0d8;
+    border: solid 2px #228b22;
+}
+
+.requirement {
+    color: #FF4500; 
+    margin-top: 5px;
+}
+
+.requirement:before {
+    content: '\2022'; 
+    margin-right: 5px;
+}
+
+.requirement-list {
+    list-style: none;
+    padding: 0;
+}
+
+.requirement-list li {
+    margin-bottom: .5rem;
+}
+
+.submit-button {
+    display: block; 
+    width: 55%;
+    margin: 1.5rem auto;
+    padding: 10px;
+    background-color: var(--accent);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 20px;
+    border-radius: 13px;
+    box-shadow: 0 2px 4px #080808;
+}
+
+.submit-button:hover {
+    background-color: var(--tertiary-color);
+    transform: scale(1.1);
+    color: var(--background);
+}
+
+#newCarForm .submit-button {
+    background-color: var(--background);
+}
+
+#newCarForm .submit-button:hover {
+    color: var(--white);
+}
+
+
+form a {
+    color: var(--tertiary-color);
+}
+
+label
+{
+    display: block;
+    margin: 1rem 0; 
+}
+
+form select {
+    display: block;
+    margin-bottom: 1rem;
+}
+
+#inv-display {
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+#inv-display li {
+    max-width: 200px;
+    border: 1px #ccc solid;
+    list-style-type: none;
+    display: flex;
+    flex: 1 1 200px;
+    flex-direction: column;
+    transition: transform 0.3s ease-in-out;
+    padding: .3rem;
+    text-align: center;
+}
+
+#inv-display li:hover {
+    transform: scale(1.03); 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+
+#inv-display li img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    max-height: 200px; 
+}
+
+#inv-display li a {
+    text-decoration: none;
+    color: var(--accent-secondary);
+    margin: 0;
+    display: block;
+
+}
+
+#inv-display span {
+    margin-bottom: 0.2rem;
+    color: #3c763d;
+    font-size:large;
+}
+
+#inv-display li h2,
+#inv-display li span {
+    margin: 0; /* Reset default margin */
+    padding: 0.5rem; /* Adjust as needed */
+    text-align: center;
+}
+
+
+.vehiDetails {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.vehiDetails h1 {
+    margin-bottom: 10px;
+}
+
+#largeImg {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    box-shadow: 0 0 5px var(--background);
+}
+
+.info h2.price {
+    margin-bottom: 10px;
+}
+
+.summary {
+    border-radius: 5px;
+}
+
+.summary ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.summary ul li {
+    margin-bottom: 5px;
+    padding: 8px;
+}
+
+.summary ul li:nth-child(even) {
+    background-color: #f2f2f2; 
+}
+
+.summary ul li:nth-child(odd) {
+    background-color: #e8e8e8;
+}
+
+#image-display {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+#image-display img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+} 
+
+#image-display p {
+    width: 200px;
+    text-align: center;
+    padding: .5rem;
+}
+
+#image-display a {
+    color: var(--accent);
+}
+
+.thumbnails {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.thumbnails img {
+    max-width: 120px;
+    max-height: 120px;
+    object-fit: cover;
+    transition: 
+    scale 10ms ease
+}
+
+.thumbnails img:hover {
+    transform: scale(1.4);
+}
+
+.pagination {
+    text-align: center;
+}
+
+.pagination a {
+    text-decoration: none;
+    color: var(--accent);
+    margin: 0 5px;
+}
+
+a.active {
+    color: var(--background);
+}
