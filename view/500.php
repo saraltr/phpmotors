@@ -1,4 +1,17 @@
-<!DOCTYPE html>
+<?php
+session_start();
+
+if(isset($_SESSION['errorCode']) && isset($_SESSION['errorMessage'])) {
+    $errorCode = $_SESSION['errorCode'];
+    $errorMessage = "Sorry, our server seems to be experiencing some technical difficulties.<br>Cause: " . $_SESSION['errorMessage'];
+} else {
+    $errorMessage = "Sorry, our server seems to be experiencing some technical difficulties. Please check back later."; // default message
+}
+
+// Unset or clear the session variables after using them
+unset($_SESSION['errorCode']);
+unset($_SESSION['errorMessage']);
+?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -20,7 +33,7 @@
       <main>
         <section class="errorMsg">
         <h1>Server Error</h1>
-            <p>Sorry our server seems to be experiencing some technical difficulties. Please check back later</p>
+        <p><?php echo $errorMessage; ?></p>
         </section>
       </main>
       <footer>
